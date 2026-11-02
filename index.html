@@ -212,19 +212,19 @@
 
   /* lokasi */
   .loc-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:stretch}
-  .loc-card{border:1px solid var(--line);border-radius:var(--radius);padding:38px;background:var(--surface)}
-  .loc-row{display:flex;gap:18px;padding:18px 0;border-bottom:1px solid var(--line)}
+  .loc-card{border:1px solid var(--line);border-radius:var(--radius);padding:38px;background:var(--surface);min-width:0}
+  .loc-row{display:flex;gap:18px;padding:18px 0;border-bottom:1px solid var(--line);min-width:0}
   .loc-row:last-of-type{border-bottom:none}
   .loc-row .lbl{
     flex:0 0 118px;font-size:11px;letter-spacing:.22em;text-transform:uppercase;
     color:var(--muted);padding-top:4px;
   }
-  .loc-row .val{font-size:16px;line-height:1.55}
-  .loc-row .val a{color:var(--green);text-decoration:none;border-bottom:1px solid rgba(65,207,140,.35)}
+  .loc-row .val{font-size:16px;line-height:1.55;min-width:0;overflow-wrap:anywhere}
+  .loc-row .val a{color:var(--green);text-decoration:none;border-bottom:1px solid rgba(65,207,140,.35);overflow-wrap:anywhere}
   .loc-row .val a:hover{border-bottom-color:var(--green)}
   .map{
     border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;
-    min-height:380px;position:relative;
+    min-height:380px;position:relative;min-width:0;
     background:
       linear-gradient(0deg, rgba(14,15,17,.78), rgba(14,15,17,.35)),
       repeating-linear-gradient(0deg, #1c2024 0 39px, #22272c 39px 40px),
