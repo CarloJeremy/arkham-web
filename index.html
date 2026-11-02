@@ -225,25 +225,9 @@
   .map{
     border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;
     min-height:380px;position:relative;min-width:0;
-    background:
-      linear-gradient(0deg, rgba(14,15,17,.78), rgba(14,15,17,.35)),
-      repeating-linear-gradient(0deg, #1c2024 0 39px, #22272c 39px 40px),
-      repeating-linear-gradient(90deg, #1c2024 0 39px, #22272c 39px 40px);
+    background:#22272c;
   }
-  .map .roads{position:absolute;inset:0}
-  .map .pin{
-    position:absolute;left:50%;top:47%;transform:translate(-50%,-100%);
-    text-align:center;
-  }
-  .map .pin .dot{
-    width:18px;height:18px;border-radius:50%;background:var(--red);
-    margin:0 auto 10px;box-shadow:0 0 0 6px rgba(224,86,63,.25), 0 0 30px rgba(224,86,63,.5);
-  }
-  .map .pin .name{
-    background:var(--ink);color:#111;font-weight:700;font-size:13px;
-    padding:8px 14px;border-radius:8px;white-space:nowrap;
-  }
-  .map .pin .addr{font-size:12px;color:#cfc9bf;margin-top:8px}
+  .map iframe{position:absolute;inset:0;width:100%;height:100%;filter:grayscale(.25) contrast(1.02)}
   .map-link{
     position:absolute;left:18px;bottom:18px;font-size:13px;
     background:rgba(14,15,17,.85);border:1px solid var(--line);
@@ -646,26 +630,16 @@
           </div>
           <div style="margin-top:26px;display:flex;gap:12px;flex-wrap:wrap">
             <a class="btn btn-green" href="https://wa.me/6281380694770" target="_blank" rel="noopener">Chat &amp; Booking</a>
-            <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=Ruko+Hampton+Avenue+C-21+Gading+Serpong" target="_blank" rel="noopener">Buka di Google Maps</a>
+            <a class="btn btn-ghost" href="https://maps.app.goo.gl/tvHr81x5TLuJdNuo8" target="_blank" rel="noopener">Buka di Google Maps</a>
           </div>
         </div>
 
-        <div class="map" role="img" aria-label="Peta lokasi Arkham Game & Hobby Space di Ruko Hampton Avenue C-21 Lt.3, Gading Serpong">
-          <svg class="roads" viewBox="0 0 400 300" preserveAspectRatio="none" aria-hidden="true">
-            <path d="M0 210 L400 180" stroke="#2c3238" stroke-width="14"/>
-            <path d="M150 0 L185 300" stroke="#2c3238" stroke-width="10"/>
-            <path d="M0 90 L400 70" stroke="#242a2f" stroke-width="8"/>
-            <rect x="215" y="95" width="52" height="34" fill="#1f252a" stroke="#2c3238"/>
-            <rect x="285" y="105" width="60" height="40" fill="#1f252a" stroke="#2c3238"/>
-            <rect x="215" y="150" width="44" height="30" fill="#1f252a" stroke="#2c3238"/>
-            <rect x="60" y="115" width="58" height="36" fill="#1f252a" stroke="#2c3238"/>
-          </svg>
-          <div class="pin">
-            <div class="dot"></div>
-            <div class="name">Arkham Game &amp; Hobby Space</div>
-            <div class="addr">Ruko Hampton Avenue C-21, Lt. 3</div>
-          </div>
-          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Ruko+Hampton+Avenue+C-21+Gading+Serpong" target="_blank" rel="noopener">Petunjuk arah →</a>
+        <div class="map" role="region" aria-label="Peta lokasi Arkham Game & Hobby Space di Ruko Hampton Avenue C-21 Lt.3, Gading Serpong">
+          <iframe
+            src="https://maps.google.com/maps?q=Arkham%20Game%20%26%20Hobby%20Space%20-%20Ruko%20Hampton%20Avenue%20C-21%2C%20Gading%20Serpong&t=&z=17&ie=UTF8&iwloc=&output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            title="Peta Arkham Game & Hobby Space" style="border:0"></iframe>
+          <a class="map-link" href="https://maps.app.goo.gl/tvHr81x5TLuJdNuo8" target="_blank" rel="noopener">Petunjuk arah →</a>
         </div>
       </div>
     </div>
